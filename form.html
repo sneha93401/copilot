@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="form.css">
+</head>
+
+<body>
+  <div id="main_form">
+
+    <div class="form-container" id="sign-in-form">
+      <span><i class="fa-solid fa-xmark" id="cross"></i></span>
+      <h2 class="head">Sign In</h2>
+      <form action="#" onsubmit="validation()">
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password" name="password" placeholder="Password" required>
+          <label for="logPassword"></label>
+          <div class="eye-area">
+            <div class="eye-box" onclick="myLogPassword()">
+              <i class="fa-regular fa-eye" id="eye"></i>
+              <i class="fa-regular fa-eye-slash" id="eye-slash"></i>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" id="Sign-in">
+          <input type="submit" value="Sign In" onclick="saveData()">
+        </div>
+        <span class="account1">Don't have an account? </span>
+        <div class="form-link1" onclick="showSignUpForm()">Sign up</div>
+      </form>
+    </div>
+
+    <div class="form-container hidden" id="sign-up-form">
+      <span><i class="fa-solid fa-xmark" id="cross"></i></span>
+      <h2>Sign Up</h2>
+      <form method="post" id="form" name="myform">
+        <div class="form-group">
+          <input type="text" id="new_name" name="new_name" placeholder="Username" required>
+        </div>
+        <div class="form-group">
+          <input type="phone" id="new_phone" name="new_phone" placeholder="phone number" required>
+        </div>
+        <div class="form-group">
+          <input type="email" id="new_email" name="new_email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <input type="password" id="password1" name="new_password" placeholder="Password" required>
+          <span class="text_color"></span>
+          <label for="regPassword"></label>
+          <div class="eye-area">
+            <div class="eye-box" onclick="myRegPassword()">
+              <i class="fa-regular fa-eye" id="eye-2"></i>
+              <i class="fa-regular fa-eye-slash" id="eye-slash-2"></i>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="submit" value="Sign Up" id="SignUP">
+        </div>
+        <span class="account2">Have an account?</span>
+        <div class="form-link" onclick="showSignInForm()"> Sign in</div>
+      </form>
+    </div>
+  </div>
+  <script src="form.js"></script>
+</body>
+
+</html>
